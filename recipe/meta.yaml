@@ -1,6 +1,6 @@
 {% set name = "neomodel" %}
-{% set version = "3.2.5" %}
-{% set sha256 = "3138e960b0524afed6dc212513636e1b11103a69ce598757111763d17cef0a43" %}
+{% set version = "3.3.1" %}
+{% set sha256 = "7e2e7e5396b1848f78aa289737924243819eba9e3d89bbaad3592cb3fc7eaa88" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
