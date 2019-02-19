@@ -23,6 +23,8 @@ requirements:
     - python
     - neo4j-python-driver
     - pytz >=2017.2
+    # uses pkg-resources
+    - setuptools
 
 test:
   imports:
