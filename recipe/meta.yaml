@@ -1,24 +1,21 @@
-{% set name = "neomodel" %}
 {% set version = "3.2.5" %}
-{% set sha256 = "3138e960b0524afed6dc212513636e1b11103a69ce598757111763d17cef0a43" %}
 
 package:
-  name: {{ name|lower }}
+  name: neomodel
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/n/neomodel/neomodel-{{ version }}.tar.gz
+  sha256: 3138e960b0524afed6dc212513636e1b11103a69ce598757111763d17cef0a43
 
 build:
   number: 1000
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - neo4j-python-driver
@@ -42,7 +39,6 @@ test:
   commands:
     - neomodel_install_labels -h |grep Neo4j  # [not win]
     - neomodel_install_labels -h  # [win]
-
 
 about:
   home: https://github.com/robinedwards/neomodel
