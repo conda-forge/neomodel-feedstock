@@ -1,6 +1,6 @@
 {% set name = "neomodel" %}
-{% set version = "3.2.5" %}
-{% set sha256 = "3138e960b0524afed6dc212513636e1b11103a69ce598757111763d17cef0a43" %}
+{% set version = "4.0.0" %}
+{% set sha256 = "cca48daf4efb73b95dd1966a8446e901c91c815409d8c400dc1be6023c8a4519" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -49,18 +49,18 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'An object mapper for the neo4j graph database.'
+  summary: An object mapper for the neo4j graph database.
 
   description: |
-     An Object Graph Mapper (OGM) for the neo4j graph database, built on the awesome neo4j_driver <https://github.com/neo4j/neo4j-python-driver>
+    An Object Graph Mapper (OGM) for the neo4j graph database, built on the awesome neo4j_driver <https://github.com/neo4j/neo4j-python-driver>
 
-     Familiar Django model style definitions.
-     Powerful query API.
-     Enforce your schema through cardinality restrictions.
-     Full transaction support.
-     Thread safe.
-     pre/post save/delete hooks.
-     Django integration via django_neomodel
+    Familiar Django model style definitions.
+    Powerful query API.
+    Enforce your schema through cardinality restrictions.
+    Full transaction support.
+    Thread safe.
+    pre/post save/delete hooks.
+    Django integration via django_neomodel
   doc_url: http://neomodel.readthedocs.io/en/latest/
   dev_url: https://github.com/robinedwards/neomodel
 
