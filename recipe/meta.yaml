@@ -23,8 +23,12 @@ requirements:
     - setuptools
   run:
     - python >=3.5
-    - neo4j-python-driver
-    - pytz >=2017.2
+    - setuptools
+    - neo4j-python-driver >=4.3
+    - pytz >=2021.1
+    - neobolt >=1.7.17
+    - six
+    - shapely >=1.7.1
 
 test:
   imports:
@@ -42,9 +46,7 @@ test:
     - neomodel.relationship_manager
     - neomodel.util
   commands:
-    - neomodel_install_labels -h |grep Neo4j  # [not win]
-    - neomodel_install_labels -h  # [win]
-
+    - neomodel_install_labels -h | grep Neo4j
 
 about:
   home: https://github.com/robinedwards/neomodel
