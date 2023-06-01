@@ -1,11 +1,11 @@
-About neomodel
-==============
+About neomodel-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/neomodel-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/robinedwards/neomodel
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/neomodel-feedstock/blob/master/LICENSE.txt)
 
 Summary: An object mapper for the neo4j graph database.
 
@@ -30,8 +30,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=673&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/neomodel-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=673&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/neomodel-feedstock?branchName=main">
       </a>
     </td>
   </tr>
