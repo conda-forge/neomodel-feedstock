@@ -38,15 +38,12 @@ test:
     - neomodel.contrib
     - neomodel.contrib.semi_structured
     - neomodel.core
-    - neomodel.exception
     - neomodel.hooks
     - neomodel.match
     - neomodel.properties
     - neomodel.relationship
     - neomodel.relationship_manager
     - neomodel.util
-  commands:
-    - neomodel_install_labels -h | grep Neo4j
 
 about:
   home: https://github.com/robinedwards/neomodel
@@ -70,4 +67,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - jan-janssen
     - pvanheus
