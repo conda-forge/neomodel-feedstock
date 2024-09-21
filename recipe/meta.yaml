@@ -33,14 +33,6 @@ requirements:
 test:
   imports:
     - neomodel
-    - neomodel.config
-    - neomodel.contrib
-    - neomodel.hooks
-    - neomodel.match
-    - neomodel.properties
-    - neomodel.relationship
-    - neomodel.relationship_manager
-    - neomodel.util
 
 about:
   home: https://github.com/robinedwards/neomodel
