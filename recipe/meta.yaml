@@ -1,6 +1,6 @@
 {% set name = "neomodel" %}
-{% set version = "4.0.10" %}
-{% set sha256 = "ca8ee1e14d00d9ad7519744bd8b26d2d4f1770e0c51038c3fe83ea799dcfec50" %}
+{% set version = "5.0.0" %}
+{% set sha256 = "f9c58254399b73fd51e91fe4398ab7554cd7de8cf1f6e2df680153a0bc88d71c" %}
 
 package:
   name: {{ name|lower }}
@@ -38,7 +38,6 @@ test:
     - neomodel.contrib
     - neomodel.contrib.semi_structured
     - neomodel.core
-    - neomodel.exception
     - neomodel.hooks
     - neomodel.match
     - neomodel.properties
