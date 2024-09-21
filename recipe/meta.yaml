@@ -1,6 +1,6 @@
 {% set name = "neomodel" %}
-{% set version = "5.0.1" %}
-{% set sha256 = "8a1513e021f6dacbd82b548405e677f07064a3ae8e3720b56c2a4c9acc70f52b" %}
+{% set version = "5.3.2" %}
+{% set sha256 = "4977ede4af9b9870450eaa0f4932493927d6adb22d5efba392f5d86c7cc2cf2d" %}
 
 package:
   name: {{ name|lower }}
@@ -33,17 +33,6 @@ requirements:
 test:
   imports:
     - neomodel
-    - neomodel.cardinality
-    - neomodel.config
-    - neomodel.contrib
-    - neomodel.contrib.semi_structured
-    - neomodel.core
-    - neomodel.hooks
-    - neomodel.match
-    - neomodel.properties
-    - neomodel.relationship
-    - neomodel.relationship_manager
-    - neomodel.util
 
 about:
   home: https://github.com/robinedwards/neomodel
