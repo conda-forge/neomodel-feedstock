@@ -45,10 +45,6 @@ test:
     - neomodel.relationship
     - neomodel.relationship_manager
     - neomodel.util
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://github.com/robinedwards/neomodel
