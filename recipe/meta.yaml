@@ -35,7 +35,6 @@ test:
     - neomodel
     - neomodel.config
     - neomodel.contrib
-    - neomodel.core
     - neomodel.hooks
     - neomodel.match
     - neomodel.properties
