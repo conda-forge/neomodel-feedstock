@@ -46,7 +46,9 @@ test:
     - neomodel.relationship_manager
     - neomodel.util
   commands:
-    - neomodel_install_labels -h | grep Neo4j
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/robinedwards/neomodel
