@@ -33,7 +33,6 @@ requirements:
 test:
   imports:
     - neomodel
-    - neomodel.cardinality
     - neomodel.config
     - neomodel.contrib
     - neomodel.contrib.semi_structured
