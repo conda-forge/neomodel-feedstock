@@ -33,10 +33,6 @@ requirements:
 test:
   imports:
     - neomodel
-  requires:
-    - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/robinedwards/neomodel
