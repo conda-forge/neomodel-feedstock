@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - setuptools
     - neo4j-python-driver >=4.3
     - pytz >=2021.1
@@ -33,6 +33,8 @@ requirements:
 test:
   imports:
     - neomodel
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://github.com/robinedwards/neomodel
