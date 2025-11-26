@@ -1,6 +1,6 @@
 {% set name = "neomodel" %}
-{% set version = "5.5.3" %}
-{% set sha256 = "fe36a48843ec9376210804ce90ac7e627da0895290f6702c7cc7dc00f2d66c9e" %}
+{% set version = "6.0.0" %}
+{% set sha256 = "658ccea86b66caa4165a59fe04b6c9cb905bf742a51c000d5f313d583657d695" %}
 
 package:
   name: {{ name|lower }}
