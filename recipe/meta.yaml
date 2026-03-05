@@ -29,6 +29,7 @@ requirements:
     - neobolt >=1.7.17
     - six
     - shapely >=1.7.1
+    - typing_extensions
 
 test:
   imports:
