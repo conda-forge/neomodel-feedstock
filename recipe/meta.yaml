@@ -1,6 +1,6 @@
 {% set name = "neomodel" %}
-{% set version = "6.0.1" %}
-{% set sha256 = "13744659ff41d7a1a154af46b21f510b22fe2361940c7884ded0f18659a756de" %}
+{% set version = "6.1.0" %}
+{% set sha256 = "1c8c4e1c0e4e10ff58b214ee4822a0a6e2888318184ae648f8f5312ce0f2d547" %}
 
 package:
   name: {{ name|lower }}
@@ -29,6 +29,7 @@ requirements:
     - neobolt >=1.7.17
     - six
     - shapely >=1.7.1
+    - typing_extensions
 
 test:
   imports:
