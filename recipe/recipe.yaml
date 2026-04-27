@@ -1,28 +1,31 @@
-{% set name = "neomodel" %}
-{% set version = "6.1.0" %}
-{% set sha256 = "1c8c4e1c0e4e10ff58b214ee4822a0a6e2888318184ae648f8f5312ce0f2d547" %}
+schema_version: 1
+
+context:
+  name: neomodel
+  version: "6.1.0"
+  sha256: 1c8c4e1c0e4e10ff58b214ee4822a0a6e2888318184ae648f8f5312ce0f2d547
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
+  file_name: ${{ name }}-${{ version }}.tar.gz
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - setuptools
     - neo4j-python-driver >=4.3
     - pytz >=2021.1
@@ -31,19 +34,16 @@ requirements:
     - shapely >=1.7.1
     - typing_extensions
 
-test:
-  imports:
-    - neomodel
-  requires:
-    - python {{ python_min }}
-
+tests:
+  - python:
+      imports:
+        - neomodel
+      pip_check: false
+      python_version: ${{ python_min }}
 about:
-  home: https://github.com/robinedwards/neomodel
   license: MIT
-  license_family: MIT
   license_file: LICENSE
   summary: An object mapper for the neo4j graph database.
-
   description: |
     An Object Graph Mapper (OGM) for the neo4j graph database, built on the awesome neo4j_driver <https://github.com/neo4j/neo4j-python-driver>
 
@@ -54,8 +54,9 @@ about:
     Thread safe.
     pre/post save/delete hooks.
     Django integration via django_neomodel
-  doc_url: http://neomodel.readthedocs.io/en/latest/
-  dev_url: https://github.com/robinedwards/neomodel
+  homepage: https://github.com/robinedwards/neomodel
+  repository: https://github.com/robinedwards/neomodel
+  documentation: http://neomodel.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
