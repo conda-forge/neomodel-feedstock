@@ -1,6 +1,6 @@
 {% set name = "neomodel" %}
-{% set version = "6.2.0" %}
-{% set sha256 = "c387c24a2e1ac7ad8c33dedb3a5d2861f9081eb17faa4f6f86bacfc1159ebe67" %}
+{% set version = "7.0.0" %}
+{% set sha256 = "13154656283860f0a06d4b17c724540eb4bc294ba5ae711a373b763f772ad048" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
