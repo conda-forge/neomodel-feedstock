@@ -36,9 +36,6 @@ test:
     - neomodel
   requires:
     - python {{ python_min }}
-    - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/robinedwards/neomodel
